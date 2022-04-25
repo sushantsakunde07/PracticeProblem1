@@ -4,21 +4,10 @@ import java.util.Scanner;
 
 public class PracticeProblem {
     public static void main(String[] args) {
-        int number, min;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of elements in the array:");
-        number = sc.nextInt();
-        int arr[] = new int[number];
-        System.out.println("Enter the elements of array:");
-        for (int i = 0; i < number; i++) {
-            arr[i] = sc.nextInt();
+        int arr[] = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("Elements of given array:");
+        for (int i = 1; i < arr.length; i = i+2) {
+            System.out.println("Even position of elements: " +arr[i]);
         }
-        min = arr[0];
-        for (int i = 0; i < number; i++) {
-            if (min > arr[i]) {
-                min = arr[i];
-            }
-        }
-        System.out.println("Minimum value in the array is: " + min);
     }
 }
